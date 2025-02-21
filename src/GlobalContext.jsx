@@ -60,6 +60,10 @@ export const GlobalProvider = ({ children }) => {
   function handleDelete(id) {
     const newData = data.filter((employee) => employee.id !== id);
     setData(newData);
+    setConfirmDelete(false);
+    // console.log("Deleted");
+
+    console.log(newData);
 
     // const deleteTask = async (id) => {
     //   const res = await fetch(`${URL}/${id}`, {

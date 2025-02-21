@@ -112,7 +112,7 @@ const Employees = () => {
       {/* Toggle PopUP */}
       {popUp && <PopUp />}
       {/* toggle Confirm Delete */}
-      {confirmDelete && <ConfirmDelete id={setSelectedEmployeeId} />}
+      {confirmDelete && <ConfirmDelete id={selectedEmloyeeId} />}
     </div>
   );
 };

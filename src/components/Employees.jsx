@@ -5,7 +5,7 @@ import { MdOutlineEdit } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import { PopUp } from "./PopUp";
+import { NewEmployee } from "./NewEmployee";
 import ConfirmDelete from "../components/ConfirmDelete";
 const Employees = () => {
   const [selectedEmloyeeId, setSelectedEmployeeId] = useState(null);
@@ -110,7 +110,7 @@ const Employees = () => {
         </button>
       </div>
       {/* Toggle PopUP */}
-      {popUp && <PopUp />}
+      {popUp && <NewEmployee />}
       {/* toggle Confirm Delete */}
       {confirmDelete && <ConfirmDelete id={selectedEmloyeeId} />}
     </div>

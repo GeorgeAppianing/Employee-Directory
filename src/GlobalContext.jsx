@@ -61,7 +61,6 @@ export const GlobalProvider = ({ children }) => {
     const newData = data.filter((employee) => employee.id !== id);
     setData(newData);
     setConfirmDelete(false);
-    // console.log("Deleted");
 
     console.log(newData);
 

@@ -9,7 +9,10 @@ const Overview = () => {
     displayAllEmployees,
     displayEmployeesOnLeave,
     displayInactiveEmployees,
+    searchTerm,
+    setSearchTerm,
   } = useContext(GlobalContext);
+
   return (
     <div className="">
       <div className="flex items-center justify-between">
@@ -27,6 +30,8 @@ const Overview = () => {
             type="text"
             placeholder="Seacrh for Employee "
             className="ring-1 ring-gray-400 rounded-full px-2"
+            onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
           />
           <button className="border-gray-500 text-gray-500 border font-semibold px-4 py-1 rounded-full">
             Seach

@@ -91,11 +91,10 @@ export const GlobalProvider = ({ children }) => {
   }
 
   // Function to search employees by name
-  function searchEmployeesByName(name) {
-    return data.filter((employee) =>
-      employee.name.toLowerCase().includes(name.toLowerCase())
-    );
-  }
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredEmployees = displayRows.filter((employee) =>
+    employee.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   function DeleteConfirmation() {
     setConfirmDelete(!confirmDelete);
@@ -104,6 +103,9 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
+        searchTerm,
+        setSearchTerm,
+        filteredEmployees,
         displayActiveEmployees,
         displayAllEmployees,
         displayEmployeesOnLeave,
@@ -125,7 +127,6 @@ export const GlobalProvider = ({ children }) => {
         popUp,
         filterByDepartment,
         updateEmployee,
-        searchEmployeesByName,
         confirmDelete,
         setConfirmDelete,
         DeleteConfirmation,

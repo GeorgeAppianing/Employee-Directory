@@ -15,7 +15,8 @@ const Employees = () => {
     totalNumberOfPages,
     NextPage,
     PrevPage,
-    handleDelete,
+    // handleDelete,
+    filteredEmployees,
     // deleteTask,
     popUp,
     DeleteConfirmation,
@@ -37,7 +38,7 @@ const Employees = () => {
             </tr>
           </thead>
           <tbody className="bg-white p-6">
-            {displayRows.map((employee) => (
+            {filteredEmployees.map((employee) => (
               <tr key={employee.id} className="text-left hover:bg-gray-100">
                 <td className="flex items-center gap-2 p-2 text-left w-full border-b-1 border-gray-200">
                   <img

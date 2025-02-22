@@ -1,7 +1,7 @@
-import { GlobalContext } from "../GlobalContext";
-import { useContext } from "react";
+// import { GlobalContext } from "../GlobalContext";
+// import { useContext } from "react";
 export const NewEmployee = () => {
-  const { TogglePopUp } = useContext(GlobalContext);
+  // const { TogglePopUp } = useContext(GlobalContext);
   return (
     <div className=" fixed bg-black/50  flex justify-center items-center inset-0 z-50">
       <div className="bg-white p-4 rounded-lg gap-4 w-2/5">

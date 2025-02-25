@@ -1,5 +1,5 @@
 import { useContext, createContext, useState, useEffect } from "react";
-
+import axios from "axios";
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
@@ -29,17 +29,21 @@ export const GlobalProvider = ({ children }) => {
   // Data Fecthing
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const res = await fetch(URL);
-        const req = await res.json();
-        setData(req);
-        console.log(req);
-      } catch (error) {
-        console.log(error.message);
-      } finally {
-        setLoading(false);
-      }
+      //   try {
+      //     const res = await fetch(URL);
+      //     const req = await res.json();
+      //     setData(req);
+      //     console.log(req);
+      //   } catch (error) {
+      //     console.log(error.message);
+      //   } finally {
+      //     setLoading(false);
+      //   }
+      axios
+        .get(URL)
+        .then((res) => setData(res.data).catch((err) => console.log(err)));
     };
+
     fetchData();
   }, []);
   // Active Employees count

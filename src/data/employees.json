@@ -1,7 +1,40 @@
 {
   "employees": [
     {
-      "id": "3",
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "position": "Software Engineer",
+      "phone": "+1 555-123-4567",
+      "department": "Engineering",
+      "location": "New York",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "status": "active",
+      "salary": "$95,000",
+      "greatest_achievement": "Led the development of a scalable microservices architecture that improved system performance by 40%.",
+      "skills": ["Java", "Python", "Docker", "Kubernetes", "AWS"]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "position": "Project Manager",
+      "phone": "+1 555-234-5678",
+      "department": "Management",
+      "location": "Los Angeles",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "status": "inactive",
+      "salary": "$110,000",
+      "greatest_achievement": "Successfully managed a $2M project, delivering it 2 weeks ahead of schedule.",
+      "skills": [
+        "Agile Methodology",
+        "Scrum",
+        "Risk Management",
+        "Stakeholder Communication"
+      ]
+    },
+    {
+      "id": 3,
       "name": "Samuel Green",
       "email": "samuelgreen@example.com",
       "position": "UX Designer",
@@ -21,7 +54,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Emma Brown",
       "email": "emmabrown@example.com",
       "position": "HR Specialist",
@@ -40,7 +73,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Michael Johnson",
       "email": "michaeljohnson@example.com",
       "position": "DevOps Engineer",
@@ -54,7 +87,7 @@
       "skills": ["Jenkins", "Terraform", "Ansible", "AWS", "Git"]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Sophia Wilson",
       "email": "sophiawilson@example.com",
       "position": "Data Scientist",
@@ -74,7 +107,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "David Martinez",
       "email": "davidmartinez@example.com",
       "position": "Marketing Manager",
@@ -93,7 +126,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Isabella Taylor",
       "email": "isabellataylor@example.com",
       "position": "Customer Support",
@@ -112,7 +145,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "William Anderson",
       "email": "williamanderson@example.com",
       "position": "Finance Analyst",
@@ -126,7 +159,7 @@
       "skills": ["Financial Modeling", "Excel", "Budgeting", "Forecasting"]
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Olivia Thomas",
       "email": "oliviathomas@example.com",
       "position": "Legal Advisor",
@@ -145,7 +178,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Liam Harris",
       "email": "liamharris@example.com",
       "position": "Cyber Security Analyst",
@@ -164,7 +197,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Emma Clark",
       "email": "emmaclark@example.com",
       "position": "Operations Manager",
@@ -183,7 +216,7 @@
       ]
     },
     {
-      "id": "13",
+      "id": 13,
       "name": "Ryan Lewis",
       "email": "ryanlewis@example.com",
       "position": "Product Owner",
@@ -202,7 +235,7 @@
       ]
     },
     {
-      "id": "14",
+      "id": 14,
       "name": "Ava Robinson",
       "email": "avarobinson@example.com",
       "position": "Scrum Master",
@@ -216,7 +249,7 @@
       "skills": ["Scrum", "Kanban", "Team Facilitation", "Conflict Resolution"]
     },
     {
-      "id": "15",
+      "id": 15,
       "name": "Benjamin Adams",
       "email": "benjaminadams@example.com",
       "position": "Network Engineer",
@@ -235,7 +268,7 @@
       ]
     },
     {
-      "id": "16",
+      "id": 16,
       "name": "Chloe Cooper",
       "email": "chloecooper@example.com",
       "position": "Sales Manager",
@@ -254,7 +287,7 @@
       ]
     },
     {
-      "id": "17",
+      "id": 17,
       "name": "Daniel King",
       "email": "danielking@example.com",
       "position": "Cloud Architect",
@@ -268,7 +301,7 @@
       "skills": ["AWS", "Azure", "Cloud Security", "Terraform"]
     },
     {
-      "id": "18",
+      "id": 18,
       "name": "Sophia Hall",
       "email": "sophiahall@example.com",
       "position": "Graphic Designer",
@@ -287,7 +320,7 @@
       ]
     },
     {
-      "id": "19",
+      "id": 19,
       "name": "Lucas Scott",
       "email": "lucasscott@example.com",
       "position": "Business Analyst",
@@ -301,7 +334,7 @@
       "skills": ["Data Analysis", "SQL", "Tableau", "Process Improvement"]
     },
     {
-      "id": "20",
+      "id": 20,
       "name": "Mia Turner",
       "email": "miaturner@example.com",
       "position": "Content Strategist",
@@ -320,7 +353,7 @@
       ]
     },
     {
-      "id": "21",
+      "id": 21,
       "name": "Ethan Walker",
       "email": "ethanwalker@example.com",
       "position": "Full Stack Developer",
@@ -334,7 +367,7 @@
       "skills": ["JavaScript", "React", "Node.js", "MongoDB", "REST APIs"]
     },
     {
-      "id": "22",
+      "id": 22,
       "name": "Amelia White",
       "email": "ameliawhite@example.com",
       "position": "QA Engineer",
@@ -348,7 +381,7 @@
       "skills": ["Automated Testing", "Selenium", "JIRA", "Manual Testing"]
     },
     {
-      "id": "23",
+      "id": 23,
       "name": "James Harris",
       "email": "jamesharris@example.com",
       "position": "System Administrator",
@@ -367,7 +400,7 @@
       ]
     },
     {
-      "id": "24",
+      "id": 24,
       "name": "Charlotte Lewis",
       "email": "charlottelewis@example.com",
       "position": "Technical Writer",
@@ -386,7 +419,7 @@
       ]
     },
     {
-      "id": "25",
+      "id": 25,
       "name": "Henry Young",
       "email": "henryyoung@example.com",
       "position": "SEO Specialist",
@@ -405,7 +438,7 @@
       ]
     },
     {
-      "id": "26",
+      "id": 26,
       "name": "Grace Lee",
       "email": "gracelee@example.com",
       "position": "Content Writer",
@@ -419,7 +452,7 @@
       "skills": ["Copywriting", "Blogging", "Editing", "Content Strategy"]
     },
     {
-      "id": "27",
+      "id": 27,
       "name": "Jack Wilson",
       "email": "jackwilson@example.com",
       "position": "Data Analyst",
@@ -433,7 +466,7 @@
       "skills": ["SQL", "Tableau", "Excel", "Data Visualization"]
     },
     {
-      "id": "28",
+      "id": 28,
       "name": "Lily Martinez",
       "email": "lilymartinez@example.com",
       "position": "HR Manager",
@@ -452,7 +485,7 @@
       ]
     },
     {
-      "id": "29",
+      "id": 29,
       "name": "Noah Anderson",
       "email": "noahanderson@example.com",
       "position": "Software Developer",
@@ -466,7 +499,7 @@
       "skills": ["C#", ".NET", "Azure", "REST APIs"]
     },
     {
-      "id": "30",
+      "id": 30,
       "name": "Zoe Thomas",
       "email": "zoethomas@example.com",
       "position": "Marketing Specialist",

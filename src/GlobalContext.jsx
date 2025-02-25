@@ -29,23 +29,19 @@ export const GlobalProvider = ({ children }) => {
   // Data Fecthing
   useEffect(() => {
     const fetchData = async () => {
-      //   try {
-      //     const res = await fetch(URL);
-      //     const req = await res.json();
-      //     setData(req);
-      //     console.log(req);
-      //   } catch (error) {
-      //     console.log(error.message);
-      //   } finally {
-      //     setLoading(false);
-      //   }
-      axios
-        .get(URL)
-        .then((res) => setData(res.data).catch((err) => console.log(err)));
+      try {
+        const res = await axios.get(URL);
+        setData(res.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, []);
+
   // Active Employees count
   const displayActiveEmployees = data.filter(
     (employee) => employee.status === "active"
@@ -62,19 +58,18 @@ export const GlobalProvider = ({ children }) => {
   );
   // Delete Function
   function handleDelete(id) {
-    const newData = data.filter((employee) => employee.id !== id);
-    setData(newData);
-    setConfirmDelete(false);
+    console.log("Trying to delete employee with ID:", id); // Debugging
 
-    console.log(newData);
-
-    // const deleteTask = async (id) => {
-    //   const res = await fetch(`${URL}/${id}`, {
-    //     method: "DELETE",
-    //   });
-    //   const req = await res.json();
-    //   setData(req);
+    axios
+      .delete(`http://localhost:8000/employees/${id}`)
+      .then(() => {
+        setData((prevData) =>
+          prevData.filter((employee) => employee.id !== id)
+        );
+      })
+      .catch((err) => console.log("Delete Error:", err.response?.data || err));
   }
+
   // }
   // Toggle PopUp
   function TogglePopUp() {

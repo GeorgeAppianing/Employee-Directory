@@ -52,7 +52,8 @@ export const NewEmployee = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !position || !department || !status || !avatar) return;
+    if (!name || !position || !department || !status || !avatar)
+      return TogglePopUp();
 
     axios
       .post(`${URL}`, {

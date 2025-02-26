@@ -52,6 +52,7 @@ export const NewEmployee = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !position || !department || !status || !avatar) return;
 
     axios
       .post(`${URL}`, {
@@ -60,7 +61,7 @@ export const NewEmployee = () => {
         position: position,
         department: department,
         status: status,
-        avatar: avatar || "https://i.pravatar.cc/150",
+        avatar: "https://i.pravatar.cc/150",
       })
       .then(() => {
         return axios.get(URL); // Fetch updated data from API

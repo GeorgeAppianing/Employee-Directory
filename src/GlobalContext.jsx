@@ -40,7 +40,7 @@ export const GlobalProvider = ({ children }) => {
     };
 
     fetchData();
-  }, [URL]);
+  }, []);
 
   // Active Employees count
   const displayActiveEmployees = data.filter(
@@ -61,7 +61,7 @@ export const GlobalProvider = ({ children }) => {
     // Debugging
 
     axios
-      .delete(`http://localhost:3001/employees/${id}`)
+      .delete(`${URL}/${id}`)
       .then(() => {
         setData((prevData) =>
           prevData.filter((employee) => employee.id !== id)
@@ -129,6 +129,7 @@ export const GlobalProvider = ({ children }) => {
         confirmDelete,
         setConfirmDelete,
         DeleteConfirmation,
+        URL,
       }}
     >
       {children}

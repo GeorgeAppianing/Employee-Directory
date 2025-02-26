@@ -12,7 +12,13 @@
       "status": "active",
       "salary": "$95,000",
       "greatest_achievement": "Led the development of a scalable microservices architecture that improved system performance by 40%.",
-      "skills": ["Java", "Python", "Docker", "Kubernetes", "AWS"]
+      "skills": [
+        "Java",
+        "Python",
+        "Docker",
+        "Kubernetes",
+        "AWS"
+      ]
     },
     {
       "id": "2",
@@ -84,7 +90,13 @@
       "status": "inactive",
       "salary": "$105,000",
       "greatest_achievement": "Automated CI/CD pipelines, reducing deployment time by 50%.",
-      "skills": ["Jenkins", "Terraform", "Ansible", "AWS", "Git"]
+      "skills": [
+        "Jenkins",
+        "Terraform",
+        "Ansible",
+        "AWS",
+        "Git"
+      ]
     },
     {
       "id": "6",
@@ -156,7 +168,12 @@
       "status": "on leave",
       "salary": "$80,000",
       "greatest_achievement": "Identified cost-saving opportunities that saved the company $500K annually.",
-      "skills": ["Financial Modeling", "Excel", "Budgeting", "Forecasting"]
+      "skills": [
+        "Financial Modeling",
+        "Excel",
+        "Budgeting",
+        "Forecasting"
+      ]
     },
     {
       "id": "10",
@@ -246,7 +263,12 @@
       "status": "inactive",
       "salary": "$90,000",
       "greatest_achievement": "Improved team velocity by 30% through effective Agile coaching.",
-      "skills": ["Scrum", "Kanban", "Team Facilitation", "Conflict Resolution"]
+      "skills": [
+        "Scrum",
+        "Kanban",
+        "Team Facilitation",
+        "Conflict Resolution"
+      ]
     },
     {
       "id": "15",
@@ -298,7 +320,12 @@
       "status": "inactive",
       "salary": "$130,000",
       "greatest_achievement": "Migrated the company’s infrastructure to the cloud, reducing costs by 30%.",
-      "skills": ["AWS", "Azure", "Cloud Security", "Terraform"]
+      "skills": [
+        "AWS",
+        "Azure",
+        "Cloud Security",
+        "Terraform"
+      ]
     },
     {
       "id": "18",
@@ -331,7 +358,12 @@
       "status": "active",
       "salary": "$85,000",
       "greatest_achievement": "Identified key business insights that led to a 10% increase in operational efficiency.",
-      "skills": ["Data Analysis", "SQL", "Tableau", "Process Improvement"]
+      "skills": [
+        "Data Analysis",
+        "SQL",
+        "Tableau",
+        "Process Improvement"
+      ]
     },
     {
       "id": "20",
@@ -364,7 +396,13 @@
       "status": "active",
       "salary": "$100,000",
       "greatest_achievement": "Built a customer-facing web application that increased user engagement by 35%.",
-      "skills": ["JavaScript", "React", "Node.js", "MongoDB", "REST APIs"]
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "REST APIs"
+      ]
     },
     {
       "id": "22",
@@ -378,7 +416,12 @@
       "status": "inactive",
       "salary": "$80,000",
       "greatest_achievement": "Reduced bug rates by 50% through rigorous testing processes.",
-      "skills": ["Automated Testing", "Selenium", "JIRA", "Manual Testing"]
+      "skills": [
+        "Automated Testing",
+        "Selenium",
+        "JIRA",
+        "Manual Testing"
+      ]
     },
     {
       "id": "23",
@@ -449,7 +492,12 @@
       "status": "active",
       "salary": "$60,000",
       "greatest_achievement": "Wrote a blog series that generated over 1M views and increased brand awareness.",
-      "skills": ["Copywriting", "Blogging", "Editing", "Content Strategy"]
+      "skills": [
+        "Copywriting",
+        "Blogging",
+        "Editing",
+        "Content Strategy"
+      ]
     },
     {
       "id": "27",
@@ -463,7 +511,12 @@
       "status": "inactive",
       "salary": "$85,000",
       "greatest_achievement": "Developed dashboards that provided real-time insights, improving decision-making.",
-      "skills": ["SQL", "Tableau", "Excel", "Data Visualization"]
+      "skills": [
+        "SQL",
+        "Tableau",
+        "Excel",
+        "Data Visualization"
+      ]
     },
     {
       "id": "28",
@@ -496,7 +549,12 @@
       "status": "active",
       "salary": "$90,000",
       "greatest_achievement": "Developed a feature that reduced app loading time by 50%.",
-      "skills": ["C#", ".NET", "Azure", "REST APIs"]
+      "skills": [
+        "C#",
+        ".NET",
+        "Azure",
+        "REST APIs"
+      ]
     },
     {
       "id": "30",
@@ -516,6 +574,30 @@
         "Content Creation",
         "Analytics"
       ]
+    },
+    {
+      "id": 1740571438126,
+      "name": "George Adu",
+      "position": "Frontend Developer",
+      "department": "IT",
+      "status": "",
+      "avatar": ""
+    },
+    {
+      "id": 1740571675562,
+      "name": "",
+      "position": "",
+      "department": "",
+      "status": "",
+      "avatar": ""
+    },
+    {
+      "id": 1740571767462,
+      "name": "",
+      "position": "",
+      "department": "",
+      "status": "",
+      "avatar": ""
     }
   ],
   "cors": {

@@ -2,51 +2,76 @@ import { GlobalContext } from "../GlobalContext";
 import { useContext, useState } from "react";
 import axios from "axios";
 export const NewEmployee = () => {
-  const { TogglePopUp, setData } = useContext(GlobalContext);
+  const { TogglePopUp, setData, URL } = useContext(GlobalContext);
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [department, setDepartment] = useState("");
   const [status, setStatus] = useState("");
   const [avatar, setAvatar] = useState("");
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post(`${URL}`, {
+  //       id: Date.now(),
+  //       name: name,
+  //       position: position,
+  //       department: department,
+  //       status: status,
+  //       avatar: avatar,
+  //     })
+
+  //     .then((res) => {
+  //       setData((prevData) => [...prevData, res.data]);
+  //       console.log(res.data);
+  //       TogglePopUp();
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       TogglePopUp();
+  //     });
+  //   // axios
+  //   //   .post("http://localhost:3001/employees", {
+  //   //     name: name,
+  //   //     position: position,
+  //   //     department: department,
+  //   //     status: status,
+  //   //     avatar: avatar || "https://i.pravatar.cc/150",
+  //   //   })
+  //   //   .then((res) => {
+  //   //     setData([...data, res.data]);
+  //   //   })
+  //   //   .catch((err) => console.log("Error:", err.response?.data || err));
+  //   // setName("");
+  //   // setPosition("");
+  //   // setDepartment("");
+  //   // setStatus("");
+  //   // setAvatar("");
+  //   // TogglePopUp();
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     axios
-      .post("http://localhost:3001/employees", {
+      .post(`${URL}`, {
         id: Date.now(),
         name: name,
         position: position,
         department: department,
         status: status,
-        avatar: avatar,
+        avatar: avatar || "https://i.pravatar.cc/150",
+      })
+      .then(() => {
+        return axios.get(URL); // Fetch updated data from API
       })
       .then((res) => {
-        setData((prevData) => [...prevData, res.data]);
-        console.log(res.data);
-        TogglePopUp();
+        setData(res.data); // Update state with fresh data
+        TogglePopUp(); // Close the modal
       })
       .catch((err) => {
-        console.log(err);
-        TogglePopUp();
+        console.error("Error adding employee:", err.response?.data || err);
       });
-    // axios
-    //   .post("http://localhost:3001/employees", {
-    //     name: name,
-    //     position: position,
-    //     department: department,
-    //     status: status,
-    //     avatar: avatar || "https://i.pravatar.cc/150",
-    //   })
-    //   .then((res) => {
-    //     setData([...data, res.data]);
-    //   })
-    //   .catch((err) => console.log("Error:", err.response?.data || err));
-    // setName("");
-    // setPosition("");
-    // setDepartment("");
-    // setStatus("");
-    // setAvatar("");
-    // TogglePopUp();
   };
 
   return (

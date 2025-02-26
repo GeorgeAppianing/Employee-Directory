@@ -3,7 +3,7 @@ import axios from "axios";
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-  const URL = "http://localhost:8000/employees";
+  const URL = "http://localhost:3001/employees";
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +40,7 @@ export const GlobalProvider = ({ children }) => {
     };
 
     fetchData();
-  }, []);
+  }, [URL]);
 
   // Active Employees count
   const displayActiveEmployees = data.filter(
@@ -58,10 +58,10 @@ export const GlobalProvider = ({ children }) => {
   );
   // Delete Function
   function handleDelete(id) {
-    console.log("Trying to delete employee with ID:", id); // Debugging
+    // Debugging
 
     axios
-      .delete(`http://localhost:8000/employees/${id}`)
+      .delete(`http://localhost:3001/employees/${id}`)
       .then(() => {
         setData((prevData) =>
           prevData.filter((employee) => employee.id !== id)

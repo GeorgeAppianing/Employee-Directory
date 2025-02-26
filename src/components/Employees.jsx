@@ -76,7 +76,6 @@ const Employees = () => {
                   <button
                     className="text-red-500 hover:bg-red-400 hover:text-white p-1 hover:rounded-full "
                     onClick={() => {
-                      console.log("Setting Selected Employee ID:", employee.id);
                       setSelectedEmployeeId(employee.id);
                       DeleteConfirmation();
                     }}

@@ -62,7 +62,7 @@ export const NewEmployee = () => {
         position: position,
         department: department,
         status: status,
-        avatar: "https://i.pravatar.cc/150",
+        avatar: avatar,
       })
       .then(() => {
         return axios.get(URL); // Fetch updated data from API
@@ -140,7 +140,7 @@ export const NewEmployee = () => {
           <div className="flex flex-col gap-2">
             <label htmlFor="avatar">Avatar</label>
             <input
-              type="text"
+              type="file"
               name="avatar"
               id="avatar"
               className="border-2 border-gray-200 p-2 rounded-lg"

@@ -9,60 +9,19 @@ export const NewEmployee = () => {
   const [status, setStatus] = useState("");
   const [avatar, setAvatar] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   axios
-  //     .post(`${URL}`, {
-  //       id: Date.now(),
-  //       name: name,
-  //       position: position,
-  //       department: department,
-  //       status: status,
-  //       avatar: avatar,
-  //     })
-
-  //     .then((res) => {
-  //       setData((prevData) => [...prevData, res.data]);
-  //       console.log(res.data);
-  //       TogglePopUp();
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       TogglePopUp();
-  //     });
-  //   // axios
-  //   //   .post("http://localhost:3001/employees", {
-  //   //     name: name,
-  //   //     position: position,
-  //   //     department: department,
-  //   //     status: status,
-  //   //     avatar: avatar || "https://i.pravatar.cc/150",
-  //   //   })
-  //   //   .then((res) => {
-  //   //     setData([...data, res.data]);
-  //   //   })
-  //   //   .catch((err) => console.log("Error:", err.response?.data || err));
-  //   // setName("");
-  //   // setPosition("");
-  //   // setDepartment("");
-  //   // setStatus("");
-  //   // setAvatar("");
-  //   // TogglePopUp();
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !position || !department || !status || !avatar)
-      return TogglePopUp();
+      return alert("All Fields are required");
 
     axios
       .post(`${URL}`, {
         id: Date.now(),
-        name: name,
-        position: position,
-        department: department,
-        status: status,
-        avatar: avatar,
+        name,
+        position,
+        department,
+        status,
+        avatar,
       })
       .then(() => {
         return axios.get(URL); // Fetch updated data from API

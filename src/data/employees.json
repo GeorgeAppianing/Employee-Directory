@@ -576,7 +576,7 @@
       ]
     },
     {
-      "id": 1740790915302,
+      "id": "1740790915302",
       "name": "George Appianing",
       "position": "Software Developer",
       "department": "IT",
@@ -584,12 +584,44 @@
       "avatar": "https://i.pravatar.cc/150"
     },
     {
-      "id": 1740791000519,
+      "id": "1740791000519",
       "name": "George Adu",
       "position": "Frontend Developer",
       "department": "IT",
       "status": "on leave",
       "avatar": "C:\\fakepath\\IMG_5650.jpeg"
+    },
+    {
+      "id": "1740794062707",
+      "name": "Hilda Ofori",
+      "position": "Lead Product Manager",
+      "department": "Projects",
+      "status": "active",
+      "avatar": "https://i.pravatar.cc/150"
+    },
+    {
+      "id": 1740794220025,
+      "name": "",
+      "position": "",
+      "department": "",
+      "status": "",
+      "avatar": ""
+    },
+    {
+      "id": 1740794236809,
+      "name": "HJDhhbj",
+      "position": "jkdhsfd",
+      "department": "jfkdsfjs",
+      "status": "",
+      "avatar": "C:\\fakepath\\Logo.png"
+    },
+    {
+      "id": 1740794312594,
+      "name": "sfvuhesufd",
+      "position": "io;rwlfjsiorw",
+      "department": "oi;rwfiewhj",
+      "status": "on leave",
+      "avatar": "C:\\fakepath\\Logo.svg"
     }
   ],
   "cors": {

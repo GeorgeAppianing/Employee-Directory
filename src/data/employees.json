@@ -517,8 +517,5 @@
         "Analytics"
       ]
     }
-  ],
-  "cors": {
-    "origin": "*"
-  }
+  ]
 }

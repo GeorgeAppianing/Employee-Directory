@@ -12,22 +12,26 @@ export const NewEmployee = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !position || !department || !status || !avatar)
-      return alert("All Fields are required");
+      return alert("All fields needed");
+
+    const newData = {
+      id: Date.now(),
+      name,
+      position,
+      department,
+      status,
+      avatar,
+    };
 
     axios
-      .post(`${URL}`, {
-        id: Date.now(),
-        name,
-        position,
-        department,
-        status,
-        avatar,
-      })
-      .then(() => {
-        return axios.get(URL); // Fetch updated data from API
-      })
+      .post(`${URL}`, newData)
       .then((res) => {
-        setData(res.data); // Update state with fresh data
+        setData((prevData) => [...prevData, res.data]);
+        console.log(res.data);
+        setName("");
+        setDepartment("");
+        setPosition("");
+        setAvatar("");
         TogglePopUp(); // Close the modal
       })
       .catch((err) => {
@@ -91,6 +95,7 @@ export const NewEmployee = () => {
               value={status}
               onChange={(e) => setStatus(e.target.value)}
             >
+              <option>Select Status</option>
               <option value="active">Active</option>
               <option value="on leave">On Leave</option>
               <option value="inactive">Inactive</option>

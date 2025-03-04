@@ -7,11 +7,12 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { NewEmployee } from "./NewEmployee";
 import ConfirmDelete from "../components/ConfirmDelete";
+import Edit from "../components/Edit";
 const Employees = () => {
   const [selectedEmloyeeId, setSelectedEmployeeId] = useState(null);
   const {
     currentPage,
-    displayRows,
+    // displayRows,
     totalNumberOfPages,
     NextPage,
     PrevPage,
@@ -21,6 +22,8 @@ const Employees = () => {
     popUp,
     DeleteConfirmation,
     confirmDelete,
+    ToggleEdit,
+    edit,
     // setConfirmDelete,
   } = useContext(GlobalContext);
 
@@ -82,7 +85,10 @@ const Employees = () => {
                   >
                     <MdOutlineDelete />
                   </button>
-                  <button className="text-blue-500 ml-2 hover:bg-blue-400 hover:text-white hover:p-1 hover:rounded-full">
+                  <button
+                    className="text-blue-500 ml-2 hover:bg-blue-400 hover:text-white hover:p-1 hover:rounded-full"
+                    onClick={ToggleEdit}
+                  >
                     <MdOutlineEdit />
                   </button>
                 </td>
@@ -113,6 +119,7 @@ const Employees = () => {
       {/* Toggle PopUP */}
       {popUp && <NewEmployee />}
       {/* toggle Confirm Delete */}
+      {edit && <Edit />}
       {confirmDelete && <ConfirmDelete id={selectedEmloyeeId} />}
     </div>
   );

@@ -9,6 +9,7 @@ export const GlobalProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 6;
   const [popUp, setPopUp] = useState(false);
+  const [edit, setEdit] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
 
   // Pagination Function for prev Page
@@ -99,6 +100,10 @@ export const GlobalProvider = ({ children }) => {
     setConfirmDelete(!confirmDelete);
   }
 
+  // ToggleEdit Functionality
+  function ToggleEdit() {
+    setEdit(!edit);
+  }
   return (
     <GlobalContext.Provider
       value={{
@@ -130,6 +135,8 @@ export const GlobalProvider = ({ children }) => {
         setConfirmDelete,
         DeleteConfirmation,
         URL,
+        ToggleEdit,
+        edit,
       }}
     >
       {children}

@@ -1,11 +1,18 @@
-// import { GlobalContext } from "../GlobalContext";
-// import { useContext } from "react";
+import { GlobalContext } from "../GlobalContext";
+import { useContext, useState } from "react";
 const Edit = () => {
-  //   const { edit } = useContext(GlobalContext);
+  const { ToggleEdit, setData, URL } = useContext(GlobalContext);
+  const [name, setName] = useState("");
+  const [position, setPosition] = useState("");
+  const [department, setDepartment] = useState("");
+  const [status, setStatus] = useState("");
+  const [avatar, setAvatar] = useState("");
+
+  const handleEdit = () => {};
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50 bg-black/50">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleEdit}
         action=""
         className=" fixed bg-black/50  flex justify-center items-center inset-0 z-50"
       >
@@ -13,7 +20,7 @@ const Edit = () => {
           <div className="flex flex-col gap-2 ">
             <div
               className="inline-block w-fit bg-black p-2 rounded-full text-white font-bold"
-              onClick={TogglePopUp}
+              onClick={ToggleEdit}
             >
               X
             </div>

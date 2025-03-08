@@ -1,6 +1,6 @@
 import { GlobalContext } from "../GlobalContext";
 import { useContext, useState } from "react";
-const Edit = () => {
+const Edit = (employee) => {
   const { ToggleEdit, setData, URL } = useContext(GlobalContext);
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");

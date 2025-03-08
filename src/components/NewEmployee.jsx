@@ -95,7 +95,9 @@ export const NewEmployee = () => {
               value={status}
               onChange={(e) => setStatus(e.target.value)}
             >
-              <option>Select Status</option>
+              <option value="" disabled>
+                Select Status
+              </option>
               <option value="active">Active</option>
               <option value="on leave">On Leave</option>
               <option value="inactive">Inactive</option>
